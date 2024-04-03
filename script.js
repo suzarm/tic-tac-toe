@@ -13,41 +13,41 @@ function move(row,cell){
         }
         table.rows[row].cells[cell].innerHTML = symbol;
         setTimeout(function(){
-            if(table.rows[0].cells[0].innerHTML ==table.rows[0].cells[1].innerHTML &&
-            table.rows[0].cells[2].innerHTML ==table.rows[0].cells[0].innerHTML && table.rows[0].cells[0].innerHTML ){
-            return  alert('game over');
+           if(table.rows[0].cells[0].innerHTML ==table.rows[0].cells[1].innerHTML &&
+           table.rows[0].cells[2].innerHTML ==table.rows[0].cells[0].innerHTML && table.rows[0].cells[0].innerHTML ){
+             return  alert('game over,the winner is: '+ symbol);
            }
            if(table.rows[1].cells[0].innerHTML ==table.rows[1].cells[1].innerHTML &&
            table.rows[1].cells[2].innerHTML ==table.rows[1].cells[0].innerHTML && table.rows[1].cells[0].innerHTML ){
-             return  alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
            }
            if(table.rows[2].cells[0].innerHTML ==table.rows[2].cells[1].innerHTML &&
            table.rows[2].cells[2].innerHTML ==table.rows[2].cells[0].innerHTML && table.rows[2].cells[0].innerHTML ){
-            return  alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
           }
           if(table.rows[0].cells[0].innerHTML ==table.rows[1].cells[0].innerHTML &&
           table.rows[2].cells[0].innerHTML ==table.rows[0].cells[0].innerHTML && table.rows[0].cells[0].innerHTML ){
-            return  alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
           }
           if(table.rows[0].cells[1].innerHTML ==table.rows[1].cells[1].innerHTML &&
           table.rows[2].cells[1].innerHTML ==table.rows[0].cells[1].innerHTML && table.rows[0].cells[1].innerHTML ){
-            return  alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
           }
           if(table.rows[0].cells[1].innerHTML ==table.rows[1].cells[1].innerHTML &&
           table.rows[2].cells[1].innerHTML ==table.rows[0].cells[1].innerHTML && table.rows[0].cells[1].innerHTML ){
-            return  alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
           }
           if(table.rows[0].cells[2].innerHTML ==table.rows[1].cells[2].innerHTML &&
           table.rows[2].cells[2].innerHTML ==table.rows[0].cells[2].innerHTML && table.rows[0].cells[2].innerHTML ){
-            return alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
           }
           if(table.rows[0].cells[0].innerHTML ==table.rows[1].cells[1].innerHTML &&
           table.rows[2].cells[2].innerHTML ==table.rows[0].cells[0].innerHTML && table.rows[0].cells[0].innerHTML ){
-            return alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
           }
           if(table.rows[2].cells[0].innerHTML ==table.rows[1].cells[1].innerHTML &&
           table.rows[0].cells[2].innerHTML ==table.rows[2].cells[0].innerHTML && table.rows[2].cells[0].innerHTML ){
-            return alert('game over');
+            return  alert('game over,the winner is: '+ symbol);
          }
          if(table.rows[0].cells[0].innerHTML &&
             table.rows[0].cells[1].innerHTML &&
@@ -63,7 +63,7 @@ function move(row,cell){
           
         },0)
 
-        
+
     }
    
 }
