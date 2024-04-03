@@ -2,65 +2,67 @@
 let symbol = "o";
 function move(row,cell){
     console.log(row,cell);
-    if(!document.getElementById("start").rows[row].cells[cell].innerHTML ){
+    const table= document.getElementById("start");
+    if(!table.rows[row].cells[cell].innerHTML ){
         if( symbol==="o"){
             symbol="x"
+            table.rows[row].cells[cell].style.color ="red";
         } else {
             symbol="o"
+            table.rows[row].cells[cell].style.color ="blue";
         }
-        document.getElementById("start").rows[row].cells[cell].innerHTML = symbol;
+        table.rows[row].cells[cell].innerHTML = symbol;
         setTimeout(function(){
-            if(document.getElementById("start").rows[0].cells[0].innerHTML ==document.getElementById("start").rows[0].cells[1].innerHTML &&
-            document.getElementById("start").rows[0].cells[2].innerHTML ==document.getElementById("start").rows[0].cells[0].innerHTML && document.getElementById("start").rows[0].cells[0].innerHTML ){
+            if(table.rows[0].cells[0].innerHTML ==table.rows[0].cells[1].innerHTML &&
+            table.rows[0].cells[2].innerHTML ==table.rows[0].cells[0].innerHTML && table.rows[0].cells[0].innerHTML ){
             return  alert('game over');
            }
-           if(document.getElementById("start").rows[1].cells[0].innerHTML ==document.getElementById("start").rows[1].cells[1].innerHTML &&
-            document.getElementById("start").rows[1].cells[2].innerHTML ==document.getElementById("start").rows[1].cells[0].innerHTML && document.getElementById("start").rows[1].cells[0].innerHTML ){
+           if(table.rows[1].cells[0].innerHTML ==table.rows[1].cells[1].innerHTML &&
+           table.rows[1].cells[2].innerHTML ==table.rows[1].cells[0].innerHTML && table.rows[1].cells[0].innerHTML ){
              return  alert('game over');
            }
-           if(document.getElementById("start").rows[2].cells[0].innerHTML ==document.getElementById("start").rows[2].cells[1].innerHTML &&
-           document.getElementById("start").rows[2].cells[2].innerHTML ==document.getElementById("start").rows[2].cells[0].innerHTML && document.getElementById("start").rows[2].cells[0].innerHTML ){
+           if(table.rows[2].cells[0].innerHTML ==table.rows[2].cells[1].innerHTML &&
+           table.rows[2].cells[2].innerHTML ==table.rows[2].cells[0].innerHTML && table.rows[2].cells[0].innerHTML ){
             return  alert('game over');
           }
-          if(document.getElementById("start").rows[0].cells[0].innerHTML ==document.getElementById("start").rows[1].cells[0].innerHTML &&
-           document.getElementById("start").rows[2].cells[0].innerHTML ==document.getElementById("start").rows[0].cells[0].innerHTML && document.getElementById("start").rows[0].cells[0].innerHTML ){
+          if(table.rows[0].cells[0].innerHTML ==table.rows[1].cells[0].innerHTML &&
+          table.rows[2].cells[0].innerHTML ==table.rows[0].cells[0].innerHTML && table.rows[0].cells[0].innerHTML ){
             return  alert('game over');
           }
-          if(document.getElementById("start").rows[0].cells[1].innerHTML ==document.getElementById("start").rows[1].cells[1].innerHTML &&
-           document.getElementById("start").rows[2].cells[1].innerHTML ==document.getElementById("start").rows[0].cells[1].innerHTML && document.getElementById("start").rows[0].cells[1].innerHTML ){
+          if(table.rows[0].cells[1].innerHTML ==table.rows[1].cells[1].innerHTML &&
+          table.rows[2].cells[1].innerHTML ==table.rows[0].cells[1].innerHTML && table.rows[0].cells[1].innerHTML ){
             return  alert('game over');
           }
-          if(document.getElementById("start").rows[0].cells[1].innerHTML ==document.getElementById("start").rows[1].cells[1].innerHTML &&
-           document.getElementById("start").rows[2].cells[1].innerHTML ==document.getElementById("start").rows[0].cells[1].innerHTML && document.getElementById("start").rows[0].cells[1].innerHTML ){
+          if(table.rows[0].cells[1].innerHTML ==table.rows[1].cells[1].innerHTML &&
+          table.rows[2].cells[1].innerHTML ==table.rows[0].cells[1].innerHTML && table.rows[0].cells[1].innerHTML ){
             return  alert('game over');
           }
-          if(document.getElementById("start").rows[0].cells[2].innerHTML ==document.getElementById("start").rows[1].cells[2].innerHTML &&
-           document.getElementById("start").rows[2].cells[2].innerHTML ==document.getElementById("start").rows[0].cells[2].innerHTML && document.getElementById("start").rows[0].cells[2].innerHTML ){
+          if(table.rows[0].cells[2].innerHTML ==table.rows[1].cells[2].innerHTML &&
+          table.rows[2].cells[2].innerHTML ==table.rows[0].cells[2].innerHTML && table.rows[0].cells[2].innerHTML ){
             return alert('game over');
           }
-          if(document.getElementById("start").rows[0].cells[0].innerHTML ==document.getElementById("start").rows[1].cells[1].innerHTML &&
-           document.getElementById("start").rows[2].cells[2].innerHTML ==document.getElementById("start").rows[0].cells[0].innerHTML && document.getElementById("start").rows[0].cells[0].innerHTML ){
+          if(table.rows[0].cells[0].innerHTML ==table.rows[1].cells[1].innerHTML &&
+          table.rows[2].cells[2].innerHTML ==table.rows[0].cells[0].innerHTML && table.rows[0].cells[0].innerHTML ){
             return alert('game over');
           }
-          if(document.getElementById("start").rows[2].cells[0].innerHTML ==document.getElementById("start").rows[1].cells[1].innerHTML &&
-          document.getElementById("start").rows[0].cells[2].innerHTML ==document.getElementById("start").rows[2].cells[0].innerHTML && document.getElementById("start").rows[2].cells[0].innerHTML ){
+          if(table.rows[2].cells[0].innerHTML ==table.rows[1].cells[1].innerHTML &&
+          table.rows[0].cells[2].innerHTML ==table.rows[2].cells[0].innerHTML && table.rows[2].cells[0].innerHTML ){
             return alert('game over');
          }
-         if(document.getElementById("start").rows[0].cells[0].innerHTML &&
-          document.getElementById("start").rows[0].cells[1].innerHTML &&
-          document.getElementById("start").rows[0].cells[2].innerHTML &&
-          document.getElementById("start").rows[1].cells[0].innerHTML &&
-          document.getElementById("start").rows[1].cells[1].innerHTML &&
-          document.getElementById("start").rows[1].cells[2].innerHTML &&
-          document.getElementById("start").rows[2].cells[0].innerHTML &&
-          document.getElementById("start").rows[2].cells[1].innerHTML &&
-          document.getElementById("start").rows[2].cells[2].innerHTML){
+         if(table.rows[0].cells[0].innerHTML &&
+            table.rows[0].cells[1].innerHTML &&
+            table.rows[0].cells[2].innerHTML &&
+            table.rows[1].cells[0].innerHTML &&
+            table.rows[1].cells[1].innerHTML &&
+            table.rows[1].cells[2].innerHTML &&
+            table.rows[2].cells[0].innerHTML &&
+            table.rows[2].cells[1].innerHTML &&
+            table.rows[2].cells[2].innerHTML){
             return alert('draw');
           }
           
-         
         },0)
-        
+
         
     }
    
